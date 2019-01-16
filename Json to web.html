@@ -1,6 +1,6 @@
 <html>
 <head>
-<script type="text/javascript" src="jquery-3.3.1.min.js"> </script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
 
 <script>
 
@@ -9,10 +9,12 @@
 
    var posts = [];
 
-   $.getJSON('posts.json', function(data) {
+   $.getJSON('https://jsonplaceholder.typicode.com/posts', function(data) {
+       console.log(data)
        $.each(data, function(i, f) {
           var tblRow = "<tr>" + "<td>" + f.userId + "</td>" +
            "<td>" + f.id + "</td>" + "<td>" + f.title + "</td>" + "<td>" + f.body + "</td>" + "</tr>"
+           console.log(tblRow)
            $(tblRow).appendTo("#userdata tbody");
      });
 
