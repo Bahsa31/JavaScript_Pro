@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+<script>
+
+function randomize() {
+document.getElementById('p1').style.color = randomColors();
+}
+
+function randomColors() {
+  return '#' + Math.floor(Math.random() * 16777215).toString(16);
+}
+</script>
+<center><br><br>
+<div>
+<p id="p1">Hello JavaScript Program</p>
+</div>
+<br>      
+<button id="b1" onclick="randomize()">Random color</button>
+</center>
+</body>
+</html>
